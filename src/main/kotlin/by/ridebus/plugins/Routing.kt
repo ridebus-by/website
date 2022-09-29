@@ -10,12 +10,12 @@ import io.ktor.server.request.*
 fun Application.configureRouting() {
     routing {
         get("/") {
-            call.respondRedirect("index.html")
+            call.respondRedirect("index.htm")
         }
         get("/get") {
             call.respondRedirect("ridebus.db")
         }
-        // Static plugin. Try to access `/static/index.html`
+        // Static plugin. Try to access `/static/index.htm`
         static("/") {
             resources("static")
         }
