@@ -6,5 +6,5 @@ RUN gradle shadowJar --no-daemon
 FROM openjdk:11
 EXPOSE 8080:8080
 RUN mkdir /ridebus
-COPY --from=build /home/gradle/src/build/libs/*.jar /app/ridebus-server.jar
+COPY --from=build /home/gradle/src/build/libs/*.jar /ridebus/ridebus-server.jar
 ENTRYPOINT ["java","-jar","/app/ridebus-server.jar"]
